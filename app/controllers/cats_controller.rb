@@ -1,4 +1,5 @@
 class CatsController < ApplicationController
+<<<<<<< HEAD
   def index
     @cats = Cat.all
   end
@@ -27,6 +28,17 @@ class CatsController < ApplicationController
     cat.update(cat_params)
 
     redirect_to cat_path(cat)
+  end
+
+    def show
+    @cat = Cat.find(id: params[:id])
+  end
+
+  def destroy
+    @cat = Cat.find(id: params[:id])
+    @cat.destroy
+
+    redirect_to cats
   end
 
 

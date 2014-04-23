@@ -1,0 +1,5 @@
+<h1><%= @cat.name %></h1>
+<img src="<%= @cat.image_url %>" alt="cat" />
+<%= link_to "Delete", cat_path(@cat), method: :delete %>
+
+<%= link_to "Home", root_path %>
