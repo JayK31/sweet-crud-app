@@ -31,11 +31,11 @@ class CatsController < ApplicationController
   end
 
     def show
-    @cat = Cat.find(id: params[:id])
+    @cat = Cat.find(params[:id])
   end
 
   def destroy
-    @cat = Cat.find(id: params[:id])
+    @cat = Cat.find(params[:id])
     @cat.destroy
 
     redirect_to cats
