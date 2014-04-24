@@ -9,13 +9,13 @@ class CatsController < ApplicationController
 
   def create
     @cat = Cat.new(cat_params)
-      if @cat.save
-        redirect("/")
-      else
-        render :new
-      end
+    if @cat.save
+      redirect("/")
+    else
+      render :new
     end
   end
+
 
   def edit
     @cat = Cat.find(params[:id])
