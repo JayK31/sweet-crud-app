@@ -1,6 +1,6 @@
 <h1>Cats</h1>
 
 <% @cats.each do |cat| %>
-  <%= cat.name %>
-  <%= cat.image_url %>
+  <strong><%= cat.name.capitalize %></strong><br/>
+  <%= image_tag(cat.image_url, alt: "cat picture") %><br/>
 <% end %>
